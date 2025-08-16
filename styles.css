@@ -1,0 +1,211 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap");
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffc1da 0%, #f8f8e1 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  color: #ff6b6b;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 10px;
+  display: inline-block;
+}
+
+h1::before,
+h1::after {
+  content: "❤";
+  position: absolute;
+  color: #ff6b6b;
+  font-size: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+h1::before {
+  left: -20px;
+  top: -10px;
+}
+
+h1::after {
+  right: -20px;
+  bottom: -10px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Gallery Styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.photo-frame {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.photo-frame:hover {
+  transform: translateY(-10px);
+}
+
+.photo-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.photo-frame:hover .photo-container img {
+  transform: scale(1.05);
+}
+
+.caption {
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  color: #555;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.modal-title {
+  font-family: "Pacifico", cursive;
+  color: #ff6b6b;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mini-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.mini-photo {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 120px;
+}
+
+.mini-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.mini-photo:hover img {
+  transform: scale(1.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Audio Control Styles */
+.audio-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+}
+
+.audio-control button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.audio-control button:hover {
+  background: #ff5252;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

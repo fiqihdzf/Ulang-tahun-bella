@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ulang Tahun Spesial</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>HAPPY BIRTHDAY MY BABY BELLA CANTIKKU!</h1>
+      <p class="subtitle">
+        Semangat coas nya cintaku, aku tau kamu pasti cape tapi karna hari ini
+        hari bahagia jadi aku mau kasih kamu sedikut ucapan!
+      </p>
+
+      <div class="gallery">
+        <div class="photo-frame" onclick="showMorePhotos('pantai')">
+          <div class="photo-container">
+            <img
+              src="assets/beach-main.jpg"
+              alt="pemandangan matahari terbenam di pantai"
+            />
+          </div>
+          <div class="caption">Cafe Date With Bellaaa💕💕</div>
+        </div>
+
+        <div class="photo-frame" onclick="showMorePhotos('teman')">
+          <div class="photo-container">
+            <img
+              src="assets/friends-main.jpg"
+              alt="Kumpulan teman tersenyum dengan kue ulang tahun"
+            />
+          </div>
+          <div class="caption">Pantai Date With Bellaaa💕❤️</div>
+        </div>
+
+        <div class="photo-frame" onclick="showMorePhotos('dekorasi')">
+          <div class="photo-container">
+            <img src="assets/decor-main.jpg" alt="Dekorasi balon warna-warni" />
+          </div>
+          <div class="caption">Fotobox With Bellaaa💕❤️</div>
+        </div>
+
+        <div class="photo-frame" onclick="showMorePhotos('pasangan')">
+          <div class="photo-container">
+            <img
+              src="assets/couple-main.jpg"
+              alt="Pasangan memotong kue ulang tahun"
+            />
+          </div>
+          <div class="caption">Flowers Bellaaa💕❤️</div>
+        </div>
+
+        <div class="photo-frame" onclick="showMorePhotos('anak')">
+          <div class="photo-container">
+            <img
+              src="assets/kids-main.jpg"
+              alt="Anak-anak bermain dengan balon"
+            />
+          </div>
+          <div class="caption">Ice Skating Date With Bellaaa💕❤️</div>
+        </div>
+
+        <div class="photo-frame" onclick="showMorePhotos('keluarga')">
+          <div class="photo-container">
+            <img
+              src="assets/family-main.jpg"
+              alt="Keluarga berkumpul merayakan"
+            />
+          </div>
+          <div class="caption">Milkyverse Date With Bellaaa💕❤️</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal untuk foto tambahan -->
+    <div id="morePhotosModal" class="modal">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <h2 class="modal-title" id="modalTitle">More Photos</h2>
+        <div class="mini-gallery" id="miniGallery">
+          <!-- Foto tambahan akan dimuat disini -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Kontrol audio -->
+    <div class="audio-control">
+      <span>Background Music</span>
+      <button id="toggleMusic">Play</button>
+    </div>
+
+    <!-- Elemen audio -->
+    <audio id="backgroundMusic" loop>
+      <source src="assets/happy-birthday.mp3" type="audio/mpeg" />
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
